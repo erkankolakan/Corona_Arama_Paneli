@@ -38,14 +38,14 @@ function App() {
             <th scope="col">Vefat Sayısı</th>
           </tr>
         </thead>
-        <tbody >
-          <tr >
-            <th scope="row" >1</th>
-            <td>{veri === undefined ? "Veri Bekleniyor" : veri.totalTests}</td>
-            <td>{veri === undefined ? "Veri Bekleniyor" : veri.patients}</td>
-            <td>{veri === undefined ? "Veri Bekleniyor" : veri.deaths}</td>
-          </tr>
-        </tbody>
+          <tbody >
+              <tr className={veri=== undefined ? "bg-danger" : "bg-success"}>
+                <th scope="row" >{veri === undefined ? "Veri Bekleniyor" : veri.date}</th>
+                <td >{veri === undefined ? "Veri Bekleniyor" : veri.totalTests}</td>
+                <td>{veri === undefined ? "Veri Bekleniyor" : veri.patients}</td>
+                <td>{veri === undefined ? "Veri Bekleniyor" : veri.deaths}</td>
+              </tr>
+          </tbody>
       </table>
           </div>
         </div>
